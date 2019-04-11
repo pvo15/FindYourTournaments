@@ -1,0 +1,46 @@
+.CardMarginBottom {
+    margin-top: 12px;
+    width: 350px;
+    cursor: pointer;
+    .cardClose {
+        display: none;
+    }
+}
+.cardAvatar {
+    margin: 10px 0px 10px 10px;
+    border-radius: 0 !important;
+}
+.card {
+    display: flex;
+    flex-direction: row;
+}
+.cardTextSection {
+    margin: 10px;
+    width: 75%;
+
+}
+.cardTitleSection {
+    font-size: 15px;
+}
+.cardDescriptionSection {
+    margin:4px 0 0 24px;
+    font-size: 12px;
+    width: 100%;
+    color: darkgrey;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.CardMarginBottom:hover  {
+    .cardClose{
+        display: block;
+        span{
+            font-size: 20px;
+            margin-left: 9px;
+            position: absolute;
+        }
+
+    }
+}
