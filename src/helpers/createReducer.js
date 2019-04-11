@@ -1,5 +1,5 @@
 
-const createReducer = (type, uniqueKey) => (state = null, action) => {
+const createReducer = (type) => (state = null, action) => {
     const { payload } = action;
 
     switch (action.type) {

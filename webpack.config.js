@@ -29,7 +29,6 @@ module.exports = (env = {}) => {
       compress: true,
       hot: true,
       open: true,
-      host: '192.168.10.112',
     },
     module: {
       rules: [
@@ -99,7 +98,6 @@ module.exports = (env = {}) => {
     },
     plugins: [
       new webpack.HotModuleReplacementPlugin(),
-      // new webpack.optimize.UglifyJsPlugin({sourceMap: true}),
       new webpack.NamedModulesPlugin(),
       extractCSS,
       extractSCSS,

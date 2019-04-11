@@ -43,7 +43,4 @@ export default class Fetch {
 
     /* GET (retrieve) */
     static get = options => Fetch.fetch({ ...options, method: 'GET' });
-
-    /* Update (without Call) */
-    static clear = options => Fetch.getPromise({ ...options });
 }

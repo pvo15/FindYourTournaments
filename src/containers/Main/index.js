@@ -36,6 +36,7 @@ export default class Main extends PureComponent {
               selectedTournament: [...localTournament]
           }
     }
+
     getTournamentsDocument(tournaments){
       if(tournaments && tournaments.length){
         const { documents = [] } = tournaments[0];
@@ -44,12 +45,12 @@ export default class Main extends PureComponent {
 
       return [];
     }
-    onChangeHendler(value){
-      this.setState({ search: value}, () => {
-      if (value.length > 1) {
-          this.props.fetchTournaments(value);
+    async onChangeHendler(value){
+      this.setState({ search: value }, async () => {
+        if (value.length > 1) {
+         await  this.props.fetchTournaments(value);
         } else {
-          this.props.clearTournament()
+          this.props.fetchTournaments('%27%27')
         }
       })
     }
